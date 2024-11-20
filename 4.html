@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            border:2px solid;
+            height:650px;
+            width:700px;
+            margin:auto;
+        }
+        #c1{
+            background:rgba(34, 255, 0, 0.203);
+            height:200px;
+            width:150px;
+            border-top-left-radius: 100%;
+            border-top-right-radius: 100%;
+            margin-top:30px;
+            margin-left:250px;
+        }
+        #c2{
+            background:rgba(255, 0, 0, 0.205);
+            height:200px;
+            width:150px;
+            border-top-left-radius: 100%;
+            border-top-right-radius: 100%;
+            float:left;
+            margin-left:150px;
+            margin-top:100px;
+        }
+        #c3{
+            background:rgba(244, 0, 0, 0.205);
+            height:200px;
+            width:150px;
+            border-top-left-radius: 100%;
+            border-top-right-radius: 100%;
+            float:left;
+            margin-left:100px;
+            margin-top:100px;
+        }
+        .btn{
+            background:rgb(128, 128, 128);
+            height:50px;
+            width:100px;
+            border-radius:100px;
+            margin-top:220px;
+            margin-left:25px;
+        }
+        #but,
+        #but1{
+            background:black;
+            height:49px;
+            width:49px;
+            border-radius:100px;
+            position:absolute;
+            background:red;
+            cursor:pointer;
+            
+        }
+        #sbtn,
+        #sbtn1{
+            background:black;
+            height:49px;
+            width:49px;
+            border-radius:100px;
+            float:right;
+            position:absolute;
+            margin-left:50px;
+            background:yellow;
+            cursor:pointer;
+            opacity:0;
+        }
+        #b1{
+            margin-top:10px;
+            font-size: 25px;
+            margin-left:50px;        
+        }
+        #b2{
+            margin-top:10px;
+            font-size: 25px;
+            margin-left:50px;               
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="c1"></div>
+        <div id="c2">
+            <div class="btn">
+                <div id="but" onClick="on()"></div>
+                <div id="sbtn" onClick="off()"></div>
+            </div>
+            <b id="b1">OFF</b>
+        </div>
+        <div id="c3">
+            <div class="btn">
+                <div id="but1" onClick="on1()"></div>
+                <div id="sbtn1" onClick="off1()"></div>
+            </div>
+            <b id="b2">OFF</b>
+        </div>
+    </div>
+</body>
+<script>
+    function on()
+    {
+        document.getElementById('but').style.marginLeft="20px";
+        document.getElementById('but').style.opacity="0";
+        document.getElementById('sbtn').style.opacity="1";
+        document.getElementById('b1').innerText="ON";
+        document.getElementById('but').style.transition="0.2s";
+        
+    }
+    function off()
+    {
+        document.getElementById('sbtn').style.marginRight="20px";
+        document.getElementById('but').style.marginLeft="0px";
+        document.getElementById('sbtn').style.opacity="0";
+        document.getElementById('but').style.opacity="1";
+        document.getElementById('b1').innerText="OFF";
+        document.getElementById('sbtn').style.transition="0.2s";
+    }
+    function on1()
+    {
+        document.getElementById('but1').style.marginLeft="20px";
+        document.getElementById('but1').style.opacity="0";
+        document.getElementById('sbtn1').style.opacity="1";
+        document.getElementById('b2').innerText="ON";
+        document.getElementById('but1').style.transition="0.2s";
+    }
+    function off1()
+    {
+        document.getElementById('sbtn1').style.marginRight="20px";
+        document.getElementById('but1').style.marginLeft="0px";
+        document.getElementById('sbtn1').style.opacity="0";
+        document.getElementById('but1').style.opacity="1";
+        document.getElementById('b2').innerText="OFF";
+        document.getElementById('sbtn1').style.transition="0.2s";
+    }
+    
+</script>
+</html>
